@@ -1,4 +1,5 @@
-# Autoformats a python file
+# Autoformats a python file. This requires autopep8 to
+# be installed (which in turn requires pep8)
 
 # Arguments:
 # Variable number of arguments. Each one is the path to
