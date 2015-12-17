@@ -3,7 +3,8 @@
 # name
 
 # Arguments:
-# 1. The directory to copy the scripts into
+# 1. The directory to copy the scripts into 
+#    (typically /usr/bin/)
 
 if [ $# == 0 ] 
 then
@@ -13,8 +14,9 @@ fi
 
 dest=$1
 
-echo Destination: $dest
-
-mkdir $dest
+if ! [ -d $dest ] 
+then
+	mkdir $dest
+fi
 
 find ./source/ -name "*.sh" -exec cp {} $dest \;
