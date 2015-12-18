@@ -21,7 +21,7 @@ format () {
 # Formats all files in a directory
 format_dir () {
 	if [[ -d "$1" ]]; then
-		for i in `ls -d1 $1/**/*`; do 
+		for i in `ls -d1 $1/*`; do 
 			format_dir $i
 		done
 	elif [[ -f "$1" ]]; then
